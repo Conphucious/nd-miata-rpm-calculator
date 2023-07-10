@@ -2,10 +2,10 @@
 # import obd
 
 gear_ratio_map = {1: 5.0867, 2: 2.991, 3: 2.035, 4: 1.594, 5: 1.286, 6: 1.000}
+final_drive_ratio = 2.866
 
 def calculate_rpm(mph, gear, tyre_width_mm, tyre_sidewall_in, rim_diameter_in):
     # Ratios
-    final_drive_ratio = 2.866
     transmission_gear_ratio = gear_ratio_map.get(gear)
     final_gear_ratio = gear_ratio_map.get(6)
 
