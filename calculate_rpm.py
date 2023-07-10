@@ -18,7 +18,8 @@ def calculate_rpm(mph, gear, tyre_width_mm, tyre_sidewall_in, rim_diameter_in):
     tyre_rev_per_mi = (inches_per_ft * ft_per_mi) / tyre_circumference
     min_per_hr = 60
 
-    rpm = mph / (1 / transmission_ratio) / (final_gear_ratio / final_drive_ratio) / (final_gear_ratio / tyre_rev_per_mi) / min_per_hr
+    
+    rpm = mph / (final_gear_ratio / transmission_ratio) / (final_gear_ratio / final_drive_ratio) / (final_gear_ratio / tyre_rev_per_mi) / min_per_hr
     print(rpm)
 
 def convert_to_inches(mm):
