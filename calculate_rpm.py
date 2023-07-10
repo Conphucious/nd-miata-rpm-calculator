@@ -26,7 +26,7 @@ def calculate_rpm(mph, gear, tyre_width_mm, tyre_sidewall_in, rim_diameter_in):
 def convert_to_inches(mm):
     return mm / 25.4
 
-def conenct_to_obd2():
+def connect_to_obd2():
     ports = obd.scan_serial()      # return list of valid USB or RF ports
     connection = obd.OBD(ports[0]) # connect to the first port in the list
     if connection.status() == OBDStatus.CAR_CONNECTED:
